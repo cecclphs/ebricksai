@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: process.env.NODE_ENV === "production" ? "/ebricksai/" : "/",
   title: "eBricks-AI",
   description: "A Discovery-Based Learning Journey with eBricks-AI",
 
