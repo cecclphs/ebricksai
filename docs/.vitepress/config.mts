@@ -44,19 +44,6 @@ export default defineConfig({
         ],
       },
       {
-        text: "Output Devices",
-        collapsed: false,
-        items: [
-          { text: "Chapter 7: Sound and Music", link: "/chapter7" },
-          { text: "Chapter 8: 7-Segment Display", link: "/chapter8" },
-        ],
-      },
-      {
-        text: "Integration",
-        collapsed: false,
-        items: [{ text: "Chapter 9: Combining Everything", link: "/chapter9" }],
-      },
-      {
         text: "Reference",
         collapsed: true,
         items: [
