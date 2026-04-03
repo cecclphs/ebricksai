@@ -12,11 +12,11 @@ Its primary role is to serve as a bridge between the abstract logic of software 
 
 The architecture of the Nano is modular, consisting of three primary subsystems: processing, communication, and power management.
 
-<img src="C:\Users\Admin\Desktop\CEC-eBricks\arduino nano\blockdiagrampng.png" width="600">
+<img src="./images/blockdiagrampng.png" width="600"/>
 
 ### 10.2.1 The Microcontroller (MCU): ATmega328P
 
-<img src="C:\Users\Admin\Desktop\CEC-eBricks\arduino nano\atmega328P.png" width="300">
+<img src="/images/atmega328P.png" width="300">
 
 The ATmega328P is the "brain" of the system. It is an 8-bit RISC-based processor that follows the Harvard Architecture, where program instructions and data are stored in separate memory spaces.
 
@@ -29,7 +29,7 @@ The ATmega328P is the "brain" of the system. It is an 8-bit RISC-based processor
 
 ### 10.2.2 Data Communication Chip: CH340G
 
-<img src="C:\Users\Admin\Desktop\CEC-eBricks\arduino nano\ch340g.png" width="300">
+<img src="/images/CH340G.png" width="300">
 
 Since modern computers communicate via Universal Serial Bus (USB) and the ATmega328P communicates via Universal Asynchronous Receiver-Transmitter (UART), a translator is required. The **CH340G** serves as the **USB-to-UART Bridge**.
 
@@ -38,7 +38,7 @@ Since modern computers communicate via Universal Serial Bus (USB) and the ATmega
 
 ### 10.2.3 Power Regulator: LM1117 (LDO)
 
-<img src="C:\Users\Admin\Desktop\CEC-eBricks\arduino nano\lm1117impx.png" width="300">
+<img src="/images/lm1117impx.png" width="300">
 
 To ensure the CMOS logic of the MCU remains stable, the Nano utilizes the **LM1117 Low Dropout (LDO)** linear regulator.
 
