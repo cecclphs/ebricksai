@@ -6,8 +6,6 @@ The Arduino Nano is a compact, breadboard-friendly integrated system designed ar
 
 Its primary role is to serve as a bridge between the abstract logic of software and the physical constraints of hardware. For AI and software engineers, the Nano represents the **Edge Computing** layer, where data is captured via sensors, processed in real-time with minimal latency, and translated into physical action via actuators.
 
-------
-
 ## 10.2 Core Modules and Hardware Abstraction
 
 The architecture of the Nano is modular, consisting of three primary subsystems: processing, communication, and power management.
