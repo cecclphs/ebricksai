@@ -45,8 +45,6 @@ To ensure the CMOS logic of the MCU remains stable, the Nano utilizes the **LM11
 - **Function:** It steps down external input voltages (typically 7V–12V via the VIN pin) to a constant **5V**.
 - **Constraint:** Linear regulators dissipate excess voltage as **heat**. Consequently, the current draw must be monitored; pushing high current at high voltage differentials will trigger thermal shutdown or damage the trace.
 
-------
-
 ## 10.3 Component Deep Dive
 
 ### 10.3.1 The Communication System and Dual-Clock Architecture
@@ -98,8 +96,6 @@ Unlike a PC where the heap and stack share a massive pool of RAM, the Nano provi
 - **Layout:** Consists of 32 General Purpose Registers, 64 I/O Registers, 160 Extended I/O Registers, and the Internal Data SRAM.
 - **System Risk:** In resource-constrained environments, "Stack Overflow" occurs when local variables and function calls consume enough memory to collide with the "Heap" (dynamic memory allocation). Because there is no Memory Management Unit (MMU), this crash results in unpredictable "undefined behavior."
 
-------
-
 ## 10.5 Peripheral Interfacing and GPIO
 
 The pins on the Arduino Nano are not merely electrical contacts; they are multiplexed interfaces connected to the MCU’s internal peripherals.
@@ -116,8 +112,6 @@ The Nano features an 8-channel, **10-bit Successive Approximation ADC**.
 - **Resolution:** $2^{10} = 1024$ discrete levels.
 - **Voltage Mapping:** By default, it maps 0V–5V to integer values 0–1023.
 - **Application:** Used for sampling sensors (thermistors, potentiometers, light sensors).
-
-------
 
 ## 10.6 Communication Protocols
 
@@ -144,8 +138,6 @@ When an interrupt event occurs (e.g., a signal change on D2 or D3), the MCU perf
 
 For AI engineers, interrupts are vital for "Edge Triggering"—ensuring that high-priority data (like an emergency stop signal or a high-frequency sensor pulse) is processed immediately without waiting for the main software loop to finish.
 
-------
-
 ## 10.8 Hardware Programming Model
 
 Developing for the Nano requires an understanding of how software manipulates physical hardware via **Registers**.
@@ -164,8 +156,6 @@ While the Arduino framework provides functions like `digitalWrite()`, this is a 
 
 - **Abstraction:** `digitalWrite(13, HIGH);` (Takes ~50+ clock cycles)
 - **Direct Access:** `PORTB |= (1 << 5);` (Takes 1–2 clock cycles)
-
-------
 
 ## 10.9 System Constraints and Safety Parameters
 
@@ -200,8 +190,6 @@ The Nano features an "Auto-Reset" mechanism that allows the host computer to ini
 - **Capacitive Coupling:** A 0.1µF capacitor connects the DTR pin to the ATmega328P's RESET pin. This converts the sustained DTR signal into a brief low-pulse (a differentiator circuit), triggering the bootloader.
 - **Pull-up Resistor:** A 10kΩ resistor keeps the RESET pin HIGH during normal operation to prevent accidental resets from ambient electrical noise.
 
-------
-
 ## 10.11 Comparison: Arduino Nano vs. Modern SoC Architecture
 
 For Computer Engineering students familiar with modern ARM-based processors or AI accelerators, the Nano’s ATmega328P presents several architectural contrasts:
@@ -215,8 +203,6 @@ For Computer Engineering students familiar with modern ARM-based processors or A
 | **Data Width**            | 8-bit                         | 32-bit or 64-bit                   |
 
 **Engineering Insight:** While 32-bit systems are more powerful, the 8-bit Nano is superior for teaching **deterministic timing**. There is no cache-miss latency or branch prediction logic; an instruction always takes the same number of clock cycles, making it ideal for precision signal generation.
-
-------
 
 ## 10.12 Practical Summary: The System Lifecycle
 
