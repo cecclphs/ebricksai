@@ -1,13 +1,18 @@
 import { defineConfig } from "vitepress";
+import katex from 'markdown-it-katex'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: process.env.NODE_ENV === "production" ? "/ebricksai/" : "/",
   title: "eBricks-AI",
   description: "A Discovery-Based Learning Journey with eBricks-AI",
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }]
+  ],
 
   markdown: {
     config: (md) => {
+      md.use(katex)
       // Task lists are enabled by default in VitePress
       // But we can ensure other markdown features are available
     },

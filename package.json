@@ -1,5 +1,8 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "katex": "^0.16.44",
+    "markdown-it-katex": "^2.0.3"
+  },
   "devDependencies": {
     "vitepress": "^2.0.0-alpha.16"
   },
