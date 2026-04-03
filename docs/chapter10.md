@@ -12,7 +12,7 @@ Its primary role is to serve as a bridge between the abstract logic of software 
 
 The architecture of the Nano is modular, consisting of three primary subsystems: processing, communication, and power management.
 
-<img src="./images/blockdiagrampng.png" width="600"/>
+<img src="/images/blockdiagrampng.png" width="600"/>
 
 ### 10.2.1 The Microcontroller (MCU): ATmega328P
 
