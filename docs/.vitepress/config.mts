@@ -43,6 +43,15 @@ export default defineConfig({
           { text: "Chapter 6: Analog Input", link: "/chapter6" },
         ],
       },
+            {
+        text: "Output Devices",
+        collapsed: false,
+        items: [
+          { text: "Chapter 7: Sound and Music with Buzzers", link: "/chapter7" },
+          { text: "Chapter 8: The 7-Segment Display", link: "/chapter8" },
+          { text: "Chapter 9: Integration - Building Complete Systems", link: "/chapter9" },
+        ],
+      },
       {
         text: 'eB805-45 Sensor Set',
         items: [
