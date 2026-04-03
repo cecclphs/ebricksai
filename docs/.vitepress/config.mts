@@ -44,6 +44,12 @@ export default defineConfig({
         ],
       },
       {
+        text: 'eB805-45 Sensor Set',
+        items: [
+          { text: 'Chapter 10: Arduino Nano', link: '/chapter10' },
+        ]
+      },
+      {
         text: "Reference",
         collapsed: true,
         items: [
